@@ -1,35 +1,18 @@
-from pynput.keyboard import Key, Listener
+from pynput.mouse import Listener
+def on_click(x, y, button, pressed):
+    print(button.name)
+    print(type(button))
+    if not pressed:
+            pass
+        # Stop listener
+        # return False
 
-# keys_currently_pressed = []
-#
-# def on_press(key):
-#
-#     try:
-#         k = key.name  #1 single-char keys
-#     except:
-#         k = None
-#
-#     if k not in keys_currently_pressed:
-#         keys_currently_pressed.append(k)
-#
-# def process_key(keys):
-#     key_set = set(keys)
-#     if
-#
-# def on_release(key):
-#
-#     try:
-#         k = key.name  # 1 single-char keys
-#     except:
-#         k = None
-#
-#     process_key = keys_currently_pressed[:]
-#     print(keys_currently_pressed)
-#     if k in keys_currently_pressed:
-#         keys_currently_pressed.remove(k)
+def on_scroll(x, y, dx, dy):
+    print('Scrolled {0}'.format(
+        (x, y)))
 
-
-with Listener(on_press=on_press, on_release=on_release) as listener:
-        listener.join()
-
-
+# Collect events until released
+with Listener(
+        on_click=on_click,
+        on_scroll=on_scroll) as listener:
+    listener.join()

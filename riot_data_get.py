@@ -2,7 +2,7 @@ import threading
 import time
 from Player import Player
 
-api_key = 'RGAPI-4c6c64c1-1365-461f-a004-732c7891cc36'
+api_key = 'RGAPI-39c541ed-497e-44bf-8cc2-7a478593bf56'
 root = "https://na1.api.riotgames.com/"
 account_end_point = "lol/summoner/v4/summoners/by-name/"
 live_game_end_point = "lol/spectator/v4/active-games/by-summoner/"
